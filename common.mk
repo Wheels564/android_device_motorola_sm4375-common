@@ -510,4 +510,4 @@ PRODUCT_BOOT_JARS += \
     WfdCommon
 
 # Inherit from vendor blobs
-$(call inherit-product, vendor/motorola/sm6375-common/sm6375-common-vendor.mk)
+$(call inherit-product, vendor/motorola/sm4375-common/sm4375-common-vendor.mk)

@@ -13,7 +13,7 @@ persist.vendor.btstack.aac_frm_ctl.enabled=true
 ro.charger.enable_suspend=1
 
 # Display
-debug.sf.enable_hwc_vds=1
+debug.sf.enable_hwc_vds=0
 
 # CNE
 persist.vendor.cne.feature=1
