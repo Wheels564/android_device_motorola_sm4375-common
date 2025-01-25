@@ -42,16 +42,16 @@ BUILD_BROKEN_ELF_PREBUILT_PRODUCT_COPY_FILES := true
 BUILD_BROKEN_INCORRECT_PARTITION_IMAGES := true
 
 # Kernel - use prebuilt for now
-# BOARD_BOOTIMG_HEADER_VERSION := 3
-# BOARD_KERNEL_BASE := 0x00000000
-# BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x04C8C000 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=4e00000.dwc3 swiotlb=0 loop.max_part=7 cgroup.memory=nokmem,nosocket iptable_raw.raw_before_defrag=1 ip6table_raw.raw_before_defrag=1 firmware_class.path=/vendor/firmware_mnt/image androidboot.hab.csv=9 androidboot.hab.product=fogo androidboot.hab.cid=50 buildvariant=user
-# BOARD_KERNEL_PAGESIZE := 4096
-# BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
-# BOARD_KERNEL_IMAGE_NAME := Image
-# BOARD_INCLUDE_DTB_IN_BOOTIMG := true
-# BOARD_KERNEL_SEPARATED_DTBO := true
-# TARGET_KERNEL_CONFIG := fogo_defconfig
-# TARGET_KERNEL_SOURCE := kernel/motorola/fogo
+BOARD_BOOTIMG_HEADER_VERSION := 3
+BOARD_KERNEL_BASE := 0x00000000
+BOARD_KERNEL_CMDLINE := console=ttyMSM0,115200n8 earlycon=msm_geni_serial,0x04C8C000 androidboot.hardware=qcom androidboot.console=ttyMSM0 androidboot.memcg=1 lpm_levels.sleep_disabled=1 video=vfb:640x400,bpp=32,memsize=3072000 msm_rtb.filter=0x237 service_locator.enable=1 androidboot.usbcontroller=4e00000.dwc3 swiotlb=0 loop.max_part=7 cgroup.memory=nokmem,nosocket iptable_raw.raw_before_defrag=1 ip6table_raw.raw_before_defrag=1 firmware_class.path=/vendor/firmware_mnt/image androidboot.hab.csv=9 androidboot.hab.product=fogo androidboot.hab.cid=50 buildvariant=user
+BOARD_KERNEL_PAGESIZE := 4096
+BOARD_MKBOOTIMG_ARGS += --header_version $(BOARD_BOOTIMG_HEADER_VERSION)
+BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_INCLUDE_DTB_IN_BOOTIMG := true
+BOARD_KERNEL_SEPARATED_DTBO := true
+TARGET_KERNEL_CONFIG := fogo_defconfig
+TARGET_KERNEL_SOURCE := kernel/motorola/fogo
 
 # Kernel - prebuilt
 TARGET_KERNEL_ARCH := arm64
@@ -59,7 +59,7 @@ BOARD_KERNEL_IMAGE_NAME := kernel
 TARGET_PREBUILT_KERNEL := $(DEVICE_PATH)/prebuilts/kernel
 BOARD_PREBUILT_DTBIMAGE_DIR := $(DEVICE_PATH)/prebuilts
 TARGET_PREBUILT_DTB := $(DEVICE_PATH)/prebuilts/dtb.img
-BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)
+BOARD_MKBOOTIMG_ARGS += --dtb $(TARGET_PREBUILT_DTB)dtb.img
 BOARD_PREBUILT_DTBOIMAGE := $(DEVICE_PATH)/prebuilts/dtbo.img
 BOARD_KERNEL_SEPARATED_DTBO := true
 endif
